@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Approval System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <div class="container">
+        <h1>Credit Approval Prediction</h1>
+        <p class="subtitle">Enter applicant details below to predict credit worthiness.</p>
+        
+        <form id="predictionForm">
+            <div class="grid-container">
+                <div class="form-group">
+                    <label>A1 (Gender)</label>
+                    <select name="A1" required>
+                        <option value="b">b</option>
+                        <option value="a">a</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>A2 (Age)</label>
+                    <input type="number" name="A2" step="0.01" required placeholder="e.g. 30.83">
+                </div>
+
+                <div class="form-group">
+                    <label>A3 (Debt)</label>
+                    <input type="number" name="A3" step="0.001" required placeholder="e.g. 0.000">
+                </div>
+
+                <div class="form-group">
+                    <label>A4 (Marital Status)</label>
+                    <select name="A4" required>
+                        <option value="u">u</option>
+                        <option value="y">y</option>
+                        <option value="l">l</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>A5 (Bank Customer)</label>
+                    <select name="A5" required>
+                        <option value="g">g</option>
+                        <option value="p">p</option>
+                        <option value="gg">gg</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>A6 (Education Level)</label>
+                    <select name="A6" required>
+                        <option value="c">c</option>
+                        <option value="d">d</option>
+                        <option value="cc">cc</option>
+                        <option value="i">i</option>
+                        <option value="j">j</option>
+                        <option value="k">k</option>
+                        <option value="m">m</option>
+                        <option value="r">r</option>
+                        <option value="q">q</option>
+                        <option value="w">w</option>
+                        <option value="x">x</option>
+                        <option value="e">e</option>
+                        <option value="aa">aa</option>
+                        <option value="ff">ff</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>A7 (Ethnicity)</label>
+                    <select name="A7" required>
+                        <option value="v">v</option>
+                        <option value="h">h</option>
+                        <option value="bb">bb</option>
+                        <option value="j">j</option>
+                        <option value="n">n</option>
+                        <option value="z">z</option>
+                        <option value="dd">dd</option>
+                        <option value="ff">ff</option>
+                        <option value="o">o</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>A8 (Years Employed)</label>
+                    <input type="number" name="A8" step="0.01" required placeholder="e.g. 1.25">
+                </div>
+
+                <div class="form-group">
+                    <label>A9 (Prior Default)</label>
+                    <select name="A9" required>
+                        <option value="t">True</option>
+                        <option value="f">False</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>A10 (Employed)</label>
+                    <select name="A10" required>
+                        <option value="t">True</option>
+                        <option value="f">False</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>A11 (Credit Score)</label>
+                    <input type="number" name="A11" required placeholder="e.g. 1">
+                </div>
+
+                <div class="form-group">
+                    <label>A12 (Drivers License)</label>
+                    <select name="A12" required>
+                        <option value="t">True</option>
+                        <option value="f">False</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>A13 (Citizen)</label>
+                    <select name="A13" required>
+                        <option value="g">g</option>
+                        <option value="s">s</option>
+                        <option value="p">p</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>A14 (Zip Code)</label>
+                    <input type="number" name="A14" required placeholder="e.g. 00202">
+                </div>
+
+                <div class="form-group">
+                    <label>A15 (Income)</label>
+                    <input type="number" name="A15" required placeholder="e.g. 0">
+                </div>
+            </div>
+
+            <button type="submit" id="submitBtn">
+                <span>Predict Approval</span>
+                <div class="loader" id="loader"></div>
+            </button>
+        </form>
+
+        <div id="result" class="result hidden">
+            <h2 id="predictionText">Approved</h2>
+            <p id="probabilityText">Confidence: 95%</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
